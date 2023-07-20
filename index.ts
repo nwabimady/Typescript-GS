@@ -1,9 +1,5 @@
-enum Material {
-    CONCRETE = "CONCRETE",
-    WOOD = "WOOD",
-    BRICK = "BRICK",
-    STEEL = "STEEL",
-}
+type Material = "concrete" | "brick" | "steel";
+
 class Column {
     material: Material;
 
@@ -12,4 +8,4 @@ class Column {
     }
 }
 
-const column = new Column(Material["BRICK"]);
+const column = new Column('brick');
