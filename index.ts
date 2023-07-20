@@ -8,9 +8,14 @@ class Column {
 
 const column = new Column();
 column.material = 'Concrete';
-column.dimensions = {
-    X: 30,
-    y: 40
-};
+setupDimenions(column);
 
 console.log(column.dimensions.x);
+
+
+function setupDimenions(column: Column) {
+    column.dimensions = {
+        x:30,
+        y:40
+    }
+}
