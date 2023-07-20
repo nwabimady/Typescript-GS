@@ -1,11 +1,7 @@
-type Material = "concrete" | "brick" | "steel";
-
-class Column {
-    material: Material;
-
-    constructor(material: Material) {
-        this.material = material;
-    }
+type Column = {
+    Id: number | string;
 }
 
-const column = new Column('brick');
+const column: Column = {
+    Id: "kbdasfjbsa"
+}
