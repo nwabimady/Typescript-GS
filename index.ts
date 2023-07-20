@@ -16,3 +16,7 @@ function getProperties(element: ConstructionElements) {
         return element.frameCount;
     }
 }
+
+const column = new Column();
+const properties = getProperties (column);
+console.log(properties);
