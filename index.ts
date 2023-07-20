@@ -10,8 +10,10 @@ const column = new Column();
 column.material = 'Concrete';
 setupDimenions(column);
 
-console.log(column.dimensions?.x);
 
+if(column.dimensions !== undefined) {
+console.log(column.dimensions.x);
+}
 
 function setupDimenions(column: Column) {
     column.dimensions = {
