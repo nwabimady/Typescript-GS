@@ -1,12 +1,12 @@
-type Materiable = {
+interface Materiable {
     material: string;
 }
-type Measurable = {
+interface Measurable {
     width: number;
     height: number;
 }
 
-type  Physical = Materiable & Measurable;
+interface Physical extends Materiable, Measurable {}
 
 const column: Physical = {
     material: "kjsjdfh",
