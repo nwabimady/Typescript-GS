@@ -1,18 +1,8 @@
-interface Vector2D {
-    x: number;
-    y: number;
+function duplicate(input: string | number) {
+    if(typeof input === "string") {
+        return input.concat(input);
+    }
+    const text = input.toString();
+    return text.concat(text);
 }
-
-class Column {
-    material: string;
-    dimensions: Vector2D;
-
-    constructor (material: string, dimensions: Vector2D) {
-        this.material = material;
-        this.dimensions = dimensions;
-    } 
-}
-
-const column = new Column('Concrete', {x: 30, y:40} );
-
-console.log(column.dimensions.x);
+    
