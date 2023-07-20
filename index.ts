@@ -1,22 +1,24 @@
+interface Logeable {
+    Log: () => void;
+    
+}
+
 class Column {
     rebarWeight: number;
+    Log() {
+        console.log(this.rebarWeight);
+        
+    };
+    
 }
 
 class GlassWindow {
     frameCount: number;
-}
-
-type ConstructionElements  = Column | GlassWindow;
-
-function getProperties(element: ConstructionElements) {
-    if(element instanceof Column) {
-        return element.rebarWeight;
-    }
-    else{
-        return element.frameCount;
+    Log() {
+        console.log(this.frameCount);
+        
     }
 }
 
 const column = new Column();
-const properties = getProperties (column);
-console.log(properties);
+console.log();
