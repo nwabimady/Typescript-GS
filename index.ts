@@ -1,15 +1,5 @@
-interface Materiable {
-    material: string;
-}
-interface Measurable {
-    width: number;
-    height: number;
-}
+const message = document.getElementById("greet-message") as HTMLDivElement;
 
-interface Physical extends Materiable, Measurable {}
-
-const column: Physical = {
-    material: "kjsjdfh",
-    width: 1,
-    height: 2
+message.onclose = () => {
+    console.log('The greeter has closed');
 }
