@@ -9,7 +9,7 @@ class GlassWindow {
 type ConstructionElements  = Column | GlassWindow;
 
 function getProperties(element: ConstructionElements) {
-    if("rebarWeight" in element) {
+    if(element instanceof Column) {
         return element.rebarWeight;
     }
     else{
