@@ -1,20 +1,13 @@
-interface Item {
-    id: string;
-}
-interface Column extends Item {
-    material: string;
-}    
-
-interface RectColumn extends Column {
-    width: number;
-    height: number;
-    depth: number;
+function sum1(a: number, b: number) {
+    const result = a + b;
+    console.log(result);
+    return result
 }
 
-class ConcreteColumn implements  RectColumn {
-    id: string;
-    material: string;
-    width: number;
-    height: number;
-    depth: number;
+const sum2 = function (a, b) {
+    console.log(a, b);
+}
+
+const sum3 = (a, b) => {
+    console.log(a + b);
 }
