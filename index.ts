@@ -1,6 +1,11 @@
-type World = "world";
-type Greeting = `hello ${World}`;
+class Collection<Type> {
+    data: Type[] = [];
+}
 
-type Country = "GB" | "ES" | "US";
-type Lang= "en" | "es";
-type Locale = `${Lang}_${Country}`
+const texts = new Collection<string>();
+
+const firstText = texts.data[0];
+
+const numbers = new Collection<number>();
+
+const firstNumber = numbers.data[0];
