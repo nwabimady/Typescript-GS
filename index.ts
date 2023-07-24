@@ -1,12 +1,6 @@
-const CountryList = ["South Africa", "Germany", "Spain"] as const;
-type Country = typeof CountryList[number];
+type World = "world";
+type Greeting = `hello ${World}`;
 
-function isCountry(text: string): text is Country {
-    return CountryList.includes(text as any);
-}
-
-function registerUser(name: string, country: string) {
-    if(isCountry(country)) {
-        country
-    }
-}
+type Country = "GB" | "ES" | "US";
+type Lang= "en" | "es";
+type Locale = `${Lang}_${Country}`
