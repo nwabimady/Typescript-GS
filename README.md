@@ -1,1 +1,1 @@
-# Typescript-GS
+# Typescript-Getting Started
