@@ -1,11 +1,10 @@
-class Collection<Type> {
-    data: Type[] = [];
+type WallType = "Inner" | "Partition" | "Facade";
+
+
+interface Wall<Type extends WallType> {
+    type: Type;
 }
 
-const texts = new Collection<string>();
+const wall: Wall<"Facade"> = { type: "Facade" }
 
-const firstText = texts.data[0];
-
-const numbers = new Collection<number>();
-
-const firstNumber = numbers.data[0];
+wall.type
