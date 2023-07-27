@@ -1,21 +1,20 @@
 interface Column {
     material: string;
-    height?: number;
+    height: number;
 }
+type SpatialColumn = Pick<Column, "material"> & Omit<Column, "height">
 
-type ColumnTypes = "Concrete" | "Steel" | "Wood";
+//
+type Color = "red" | "green" | "blue" | "black" | "white";
+type MonochromeColours = Exclude<Color, "red" | " green" | "blue">
 
-const columnCataglogue: Record<ColumnTypes, Column> = {
-    Concrete: {
-        height: 50,
-        material: "Concrete"
-    },
-    Steel: {
-        height: 50,
-        material: "Steel"
-    },
-    Wood: {
-        height: 50,
-        material: "Wood"
-    }
+//
+type Material = "Wood" | "Concrete" | "Brick" | null;
+type StrictMaterial = NonNullable<Material>;
+
+
+//
+function computeArea(width: number, height: number) {
+    return width * height;
 }
+type AreaParameter = Parameters<typeof computeArea>;
