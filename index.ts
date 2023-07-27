@@ -1,6 +1,14 @@
-async function isUserLoggedIn(userID: string) {
-    console.log(userID);
-    return true;
+function getHeight() {
+    return 50;
 }
 
-type UserLoginResponse = Awaited<ReturnType<typeof isUserLoggedIn>>;
+interface Column {
+    material: string;
+    height: number;
+}
+
+const column: Partial<Column> = {
+    material: "Concrete",
+}
+
+column.height = getHeight();
