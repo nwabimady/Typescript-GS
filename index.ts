@@ -1,9 +1,29 @@
-function computeArea(width: number, length: number) {
-    return width * length;
+type Structural = {
+    loads: number [],
 }
 
-function invokeDelegate(callback: typeof computeArea) {
-    return callback(5, 10); // call the function with arguments (5
+type NonStructural = {
+    thermalInsulation: number;
 }
 
-invokeDelegate(computeArea);
+type BaseGroup<Type> = {
+    items: Type[];
+}
+
+type IsStructural<Type> = Type extends Structural 
+    ? { getAllLoads: () => number[]} 
+    : { getTotalInsulation: () => number };
+
+type ItemGroup<Type> = BaseGroup<Type> & IsStructural<Type>;
+
+const group: ItemGroup<Structural> = {
+    items: [],
+
+    getAllLoads() {
+        const allLoads: number[] = [];
+        for(const item of this.items) {
+            allLoads.push(...item.loads);
+        }
+        return allLoads;
+    }
+}
