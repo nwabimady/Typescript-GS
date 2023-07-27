@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function getHeight() {
     return 50;
 }
@@ -12,3 +13,6 @@ const column: Partial<Column> = {
 }
 
 column.height = getHeight();
+=======
+type TextArray<Type> = Type extends string ? Type[] : never;
+>>>>>>> master
