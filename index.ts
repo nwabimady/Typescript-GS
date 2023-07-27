@@ -1,1 +1,6 @@
-type TextArray<Type> = Type extends string ? Type[] : never;
+async function isUserLoggedIn(userID: string) {
+    console.log(userID);
+    return true;
+}
+
+type UserLoginResponse = Awaited<ReturnType<typeof isUserLoggedIn>>;
