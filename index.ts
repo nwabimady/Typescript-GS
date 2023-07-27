@@ -3,9 +3,9 @@ interface Column {
     height?: number;
 }
 
-type StrictColumn = Required<Column>;
+type TrasnformColumn = Readonly<Column>;
 
-const column: StrictColumn = {
+const column: TrasnformColumn = {
     material: "Concrete",
     height: 50,
 }
