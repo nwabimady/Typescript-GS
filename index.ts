@@ -3,9 +3,19 @@ interface Column {
     height?: number;
 }
 
-type TrasnformColumn = Readonly<Column>;
+type ColumnTypes = "Concrete" | "Steel" | "Wood";
 
-const column: TrasnformColumn = {
-    material: "Concrete",
-    height: 50,
+const columnCataglogue: Record<ColumnTypes, Column> = {
+    Concrete: {
+        height: 50,
+        material: "Concrete"
+    },
+    Steel: {
+        height: 50,
+        material: "Steel"
+    },
+    Wood: {
+        height: 50,
+        material: "Wood"
+    }
 }
